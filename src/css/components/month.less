@@ -1,0 +1,73 @@
+@border: #cdcdcd;
+@color: #373737;
+
+.month {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  color: @color;
+
+  &__wrap {
+    margin-top: 10px;
+  }
+
+  &__day {
+    border-right: 1px solid @border;
+    border-top: 1px solid @border;
+    box-sizing: border-box;
+    width: 100%;
+
+    &:first-child {
+      border-left: 1px solid @border;
+    }
+
+    &.__current {
+      background: #f1f1f1;
+    }
+
+    &.__inactive {
+      opacity: 0.4;
+    }
+
+    &-info {
+      display: block;
+      padding: 2px;
+    }
+
+    &-link {
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+  }
+
+  &__header {
+    width: 100%;
+    font-size: 12px;
+    color: #373737;
+    padding: 0 2px 5px;
+    border-right: 1px solid transparent;
+
+    &:first-child {
+      border-left: 1px solid transparent;
+    }
+
+  }
+
+  &__week,
+  &__headers {
+    display: flex;
+  }
+
+  &__week:last-child {
+
+    .month__day {
+      border-bottom: 1px solid @border;
+    }
+
+  }
+
+}

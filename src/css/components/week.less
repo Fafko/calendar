@@ -1,0 +1,84 @@
+@color: #373737;
+
+.week {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+
+  &__wrap {
+  }
+
+  &__header {
+    padding-bottom: 5px;
+    padding-top: 10px;
+    display: flex;
+
+    &-row {
+      width: calc(~'100% - 62px');
+      position: relative;
+    }
+  }
+
+  &__gmt {
+    border-right: 1px solid #cdcdcd;
+    border-left: 1px solid transparent;
+    font-size: 10px;
+    text-align: center;
+    width: 60px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 18px;
+  }
+
+  &__dates {
+    display: flex;
+  }
+
+  &__date {
+    font-size: 12px;
+    text-align: center;
+    color: @color;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+    height: 18px;
+    width: 100%;
+
+    &-link {
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+  }
+
+  &__events {
+    display: flex;
+
+    &-row {
+      display: flex;
+    }
+
+    &-full {
+      position: absolute;
+      width: 100%;
+      top: 19px;
+    }
+
+  }
+
+  &__event {
+    width: 100%;
+    padding-bottom: 10px;
+    border: 1px solid #cdcdcd;
+    border-left: none;
+  }
+
+  &__schedule {
+    display: flex;
+    width: calc(~'100% - 62px');
+  }
+
+}

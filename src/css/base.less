@@ -1,0 +1,70 @@
+@success: #5cb85c;
+@danger: #d9534f;
+@normal: #5bc0de;
+
+html {
+  font-family: Tahoma, Geneva, sans-serif;
+}
+
+.button {
+  outline: none;
+  border: none;
+  line-height: 40px;
+  color: white;
+  cursor: pointer;
+  transition: background ease 0.4s;
+  min-width: 100px;
+  padding: 0 20px;
+  font-size: inherit;
+  font-weight: inherit;
+  border-radius: 0;
+
+  &.__success {
+    background: @success;
+
+    &:hover {
+      background: lighten(@success, 10);
+    }
+    &.__active {
+      background: darken(@success, 10);
+    }
+  }
+
+  &.__danger {
+    background: @danger;
+
+    &:hover {
+      background: lighten(@danger, 10);
+    }
+    &.__active {
+      background: darken(@danger, 10);
+    }
+  }
+
+  &.__normal {
+    background: @normal;
+
+    &:hover {
+      background: lighten(@normal, 10);
+    }
+    &.__active {
+      background: darken(@normal, 10);
+      cursor: default;
+    }
+  }
+}
+
+.input, .rdt input {
+  outline: none;
+  border: 1px solid gray;
+  box-sizing: border-box;
+  line-height: 38px;
+  padding: 0 10px;
+  display: block;
+  width: 100%;
+  font-weight: 300;
+}
+
+.rdt {
+  width: 100%;
+}

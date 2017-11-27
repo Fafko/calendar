@@ -1,0 +1,47 @@
+@border: #cdcdcd;
+@color: #373737;
+
+.timeline {
+  color: @color;
+  width: 60px;
+  border: 1px solid @border;
+  overflow: hidden;
+  position: relative;
+
+  &__moment {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 4px 0 4px 4px;
+    left: 0;
+    margin-top: -4px;
+    border-color: transparent transparent transparent #cc3333;
+  }
+
+  &__gmt {
+    margin-bottom: 5px;
+    padding: 0 2px;
+    border: 1px solid transparent;
+    border-right-color: @border;
+    border-left: none;
+    font-size: 10px;
+    text-align: right;
+    height: 10px;
+  }
+
+  &__hour {
+    border-bottom: 1px solid @border;
+    box-sizing: border-box;
+    height: 40px;
+    font-size: 12px;
+    text-align: right;
+    padding: 2px;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+  }
+
+}

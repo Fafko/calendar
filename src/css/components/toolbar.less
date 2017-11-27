@@ -1,0 +1,32 @@
+.toolbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: #d7dbdc;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 14px;
+  font-weight: 300;
+  z-index: 1;
+
+  &__current-view {
+    margin: 0 10px;
+    width: 200px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  @media all and (max-width: 960px) {
+    .button {
+      min-width: 60px;
+      padding: 0 10px;
+    }
+  }
+
+}
+
